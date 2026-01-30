@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Trivia!</h1>
+
+    <!-- PART 1 -->
+    <h2>Part 1: Multiple Choice</h2>
+
+    <h3>Which language is used to style web pages?</h3>
+
+    <button class="choice">HTML</button>
+    <button class="choice">Python</button>
+    <button class="choice correct">CSS</button>
+
+    <p id="result1"></p>
+
+    <!-- PART 2 -->
+    <h2>Part 2: Free Response</h2>
+
+    <h3>What does CPU stand for?</h3>
+
+    <input type="text" id="answer">
+    <button id="check">Check Answer</button>
+
+    <p id="result2"></p>
+
+    <script>
+        // PART 1: MULTIPLE CHOICE
+        let buttons = document.querySelectorAll(".choice");
+
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function() {
+
+                // Reset colors
+                buttons.forEach(b => b.style.backgroundColor = "");
+
+                if (button.classList.contains("correct")) {
+                    button.style.backgroundColor = "green";
+                    document.querySelector("#result1").innerText = "Correct!";
+                }
+                else {
+                    button.style.backgroundColor = "red";
+                    document.querySelector("#result1").innerText = "Incorrect";
+                }
+            });
+        });
+
+        // PART 2: FREE RESPONSE
+        document.querySelector("#check").addEventListener("click", function() {
+            let input = document.querySelector("#answer");
+            let text = input.value.trim().toLowerCase();
+
+            if (text === "central processing unit") {
+                input.style.backgroundColor = "green";
+                document.querySelector("#result2").innerText = "Correct!";
+            }
+            else {
+                input.style.backgroundColor = "red";
+                document.querySelector("#result2").innerText = "Incorrect";
+            }
+        });
+    </script>
+
+</body>
+</html>

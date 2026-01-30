@@ -1,0 +1,20 @@
+sort1 uses:
+Bubble sort
+
+How do you know?:
+sort1 was very fast on already sorted input (sorted50000: 0.559s) but became extremely slow on reversed input (reversed50000: 5.110s),
+which is typical of bubble sort.
+
+sort2 uses:
+Merge sort
+
+How do you know?:
+sort2 was by far the fastest on large input (0.672s).
+Merge sort is O(n log n), so it is much faster than selection and bubble sort for big files.
+
+sort3 uses:
+Selection sort
+
+How do you know?:
+sort3 took roughly the same amount of time for sorted and reversed inputs (sorted50000: 2.478s, reversed50000: 2.903s).
+Selection sort is O(n²) and its runtime doesn’t change much based on input order.

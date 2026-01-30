@@ -1,0 +1,10 @@
+In this problem set, I learned how to query data from a relational database using SQL.
+I practiced selecting specific columns, sorting results using ORDER BY, and filtering
+data using WHERE with multiple conditions.
+
+I also learned how to use aggregate functions such as AVG to return a single value,
+and how to use JOIN to combine data from multiple tables without assuming specific IDs.
+This helped me understand how relational databases connect related information.
+
+Overall, this problem set made me more confident in writing SQL queries and understanding
+how real-world datasets can be analyzed efficiently.
